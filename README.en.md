@@ -61,7 +61,7 @@ If you want the project for development, some prerequisites are necessary.
 Here in this [link][acknowledgments] you can see all the material we used to build the project. 😉
 
 ## Guiding teachers
-| [<div><img width=115 src="https://avatars.githubusercontent.com/u/31980070?v=4"><br><sub>Luan Fernandes</sub></div>][arekushi] <div title="Guide">📚</div> |
+| [<div><img width=115 src="https://avatars.githubusercontent.com/u/31980070?v=4"><br><sub>Luan Fernandes</sub></div>][luan] <div title="Guide">📚</div> |
 | :---: |
 
 ## Contributors
@@ -87,3 +87,4 @@ Here in this [link][acknowledgments] you can see all the material we used to bui
 [diego]: https://github.com/nevesbattousai
 [ana]: https://github.com/Anakaita
 [myche]: https://github.com/mychveloso
+[luan]: https://github.com/souluanf

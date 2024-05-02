@@ -61,7 +61,7 @@ Se quiser o projeto para desenvolver, alguns pré-requisitos são necessários.
 Aqui está um [link][acknowledgments] onde você pode ver todo o material que usamos para construir o projeto. 😉
 
 ## Professores orientadores
-| [<div><img width=115 src="https://avatars.githubusercontent.com/u/31980070?v=4"><br><sub>Luan Fernandes</sub></div>][arekushi] <div title="Guide">📚</div> |
+| [<div><img width=115 src="https://avatars.githubusercontent.com/u/31980070?v=4"><br><sub>Luan Fernandes</sub></div>][luan] <div title="Guide">📚</div> |
 | :---: |
 
 ## Contribuidores
@@ -87,3 +87,4 @@ Aqui está um [link][acknowledgments] onde você pode ver todo o material que us
 [diego]: https://github.com/nevesbattousai
 [ana]: https://github.com/Anakaita
 [myche]: https://github.com/mychveloso
+[luan]: https://github.com/souluanf
