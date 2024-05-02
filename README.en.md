@@ -19,6 +19,7 @@
     Versão em português desse README.md <a href="https://github.com/Arekushi/movie-recommender-api/blob/master/README.md">aqui</a>
 </p>
 
+
 ## About The Project
 🚧 Under construction
 
@@ -43,7 +44,13 @@ If you want the project for development, some prerequisites are necessary.
 
 
 ### .env variables
-🚧 Under construction
+> You need to create an `.env` file inside the project root.
+```python
+DATABASE_URL="mongodb+srv://..."
+HOST_URL="127.0.0.1"
+HOST_PORT="8080"
+RELOAD="1"
+```
 
 
 ### Installation
@@ -55,7 +62,16 @@ If you want the project for development, some prerequisites are necessary.
     ```sh
     poetry install
     ```
-3. 🚧 Under construction
+3. Run on terminal:
+    ```sh
+    prisma py generate
+    ```
+4. To finish, run:
+    ```sh
+    python main.py
+    ```
+5. Done, the project is already running 🎉
+
 
 ## Acknowledgments
 Here in this [link][acknowledgments] you can see all the material we used to build the project. 😉

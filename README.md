@@ -19,6 +19,7 @@
     English version of this README.md <a href="https://github.com/Arekushi/movie-recommender-api/blob/master/README.en.md">here</a>
 </p>
 
+
 ## Sobre o Projeto
 🚧 Mais detalhamento em breve.
 
@@ -43,7 +44,13 @@ Se quiser o projeto para desenvolver, alguns pré-requisitos são necessários.
 
 
 ### Variáveis .env
-🚧 Mais detalhamento em breve.
+> Você precisa criar um arquivo `.env` dentro da pasta raíz.
+```python
+DATABASE_URL="mongodb+srv://..."
+HOST_URL="127.0.0.1"
+HOST_PORT="8080"
+RELOAD="1"
+```
 
 
 ### Instalação
@@ -55,7 +62,15 @@ Se quiser o projeto para desenvolver, alguns pré-requisitos são necessários.
     ```sh
     poetry install
     ```
-3. 🚧 Mais detalhamento em breve.
+3. Execute no terminal:
+    ```sh
+    prisma py generate
+    ```
+4. Para finalizar, execute:
+    ```sh
+    python main.py
+    ```
+5. Prontinho, o projeto já está executando 🎉
 
 ## Reconhecimentos
 Aqui está um [link][acknowledgments] onde você pode ver todo o material que usamos para construir o projeto. 😉
