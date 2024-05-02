@@ -1,0 +1,7 @@
+[datasets]
+filmtv_movies = "https://www.kaggle.com/datasets/stefanoleone992/filmtv-movies-dataset?select=filmtv_movies.csv"
+
+[graphql]
+title = "Movie Recommender API GraphQL"
+version = "0.0.1"
+prefix = "/api"

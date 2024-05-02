@@ -12,6 +12,11 @@ strawberry-graphql = {extras = ["debug-server"], version = "^0.227.3"}
 uvicorn = "^0.29.0"
 prisma = "^0.13.1"
 fastapi = "^0.110.3"
+asyncio = "^3.4.3"
+dynaconf = "^3.2.5"
+python-dotenv = "^1.0.1"
+cryptography = "^42.0.5"
+pydantic = "^2.7.1"
 
 
 [build-system]
