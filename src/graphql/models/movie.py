@@ -56,3 +56,6 @@ class MovieNotFound:
 @strawberry.type
 class MovieDeleted:
     message: str = "Movie deleted successfully."
+
+
+

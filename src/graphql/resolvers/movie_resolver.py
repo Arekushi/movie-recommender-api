@@ -16,7 +16,7 @@ async def get_movie(
             }
         }
     )
-    
+
     if movie is None:
         pass
 
@@ -34,5 +34,7 @@ async def add_movie(
     added_movie = await prisma.movie.create(
         data=asdict(movie)
     )
-    
+
     return Movie(**added_movie.__dict__)
+
+

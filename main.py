@@ -1,38 +1,33 @@
 import uvicorn
-from starlette.applications import Starlette
-from starlette.responses import JSONResponse
-from starlette.routing import Route
-from strawberry.asgi import GraphQL
+from fastapi import FastAPI
+from strawberry.fastapi import GraphQLRouter
 from src.graphql.schemas.query_schema import Query
-from src.app import create_app
+from src.graphql.schemas.mutation_schema import Mutation
 from config import settings
+import strawberry
 
-app = Starlette()
+# Crie o aplicativo FastAPI
+app = FastAPI()
 
-# Defina o esquema GraphQL
-schema = Query
+# Defina e construa o esquema GraphQL completo
+schema = strawberry.Schema(query=Query, mutation=Mutation)
+graphql_app = GraphQLRouter(schema)
 
-# Crie a função de visualização para a rota GraphQL
-async def graphql(request):
-    data = await request.json()
-    response = schema.execute_sync(data.get("query"))
-    return JSONResponse(response)
-
-# Adicione a rota GraphQL ao servidor
-app.add_route("/graphql", GraphQL(schema=schema))
+# Adicione a rota GraphQL ao servidor FastAPI
+app.include_router(graphql_app, prefix="/graphql")
 
 # Defina outras rotas do aplicativo
-@app.route("/")
-async def root(request):
-    return JSONResponse({"message": "Hello World"})
+@app.get("/")
+async def root():
+    return {"message": "Bem-vindo"}
 
-@app.route("/home")
-async def home(request):
-    return JSONResponse({"message": "Bem-Vindo a página inicial"})
+@app.get("/home")
+async def home():
+    return {"message": "Recomendação de Filmes!"}
 
 def main():
     uvicorn.run(
-        app,
+        'main:app',
         host=settings.HOST_URL,
         port=settings.HOST_PORT,
         reload=bool(settings.RELOAD)

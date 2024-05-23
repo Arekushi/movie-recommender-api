@@ -16,8 +16,8 @@ datasource db {
 }
 
 model Movie {
- //   id           String   @id @default(auto()) @map("_id") @db.ObjectId
-    id              String @id @map("_id") @db.ObjectId
+    id           String   @id @default(auto()) @map("_id") @db.ObjectId
+//    id              String @id @map("_id") @db.ObjectId
     filmtv_id      Int
     original_title String
     release_year   Int
