@@ -4,7 +4,11 @@ from strawberry.fastapi import GraphQLRouter
 from src.graphql.schemas.query_schema import Query
 from src.graphql.schemas.mutation_schema import Mutation
 from config import settings
+from prisma import Prisma
 import strawberry
+
+# Inicialize o cliente Prisma
+prisma = Prisma()
 
 # Crie o aplicativo FastAPI
 app = FastAPI()
@@ -24,6 +28,16 @@ async def root():
 @app.get("/home")
 async def home():
     return {"message": "Recomendação de Filmes!"}
+
+# Conectar o cliente Prisma na inicialização do aplicativo
+@app.on_event("startup")
+async def startup():
+    await prisma.connect()
+
+# Desconectar o cliente Prisma na finalização do aplicativo
+@app.on_event("shutdown")
+async def shutdown():
+    await prisma.disconnect()
 
 def main():
     uvicorn.run(
